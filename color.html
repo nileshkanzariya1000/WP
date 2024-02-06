@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Background Color</title>
+  <style>
+    div{
+        height: 50px;
+        width: 50px;
+        border: 3px solid rgb(0, 0, 0);
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+
+    <div style="background-color: red; ">RED</div>
+    <div style="background-color: blue;">blue</div>
+    <div style="background-color: purple;">purple</div>
+    <div style="background-color: greenyellow;">GREEN</div>
+    <div style="background-color: yellow;">YELLO</div>
+    <div style="background-color: grey;">GREY</div><br><br>
+    <form action="" method="post">
+        <input type="color" name="mix" id="mix" ><br><br>
+        <input type="button" id="sub" name="sub" value="change color">
+    </form>
+
+
+  <script>
+    $(document).ready(function() {
+      $("div").click(function() {
+        $bgcolor=$(this).css('background-color');
+        $("body").css("background-color", $bgcolor);
+      });
+      $("#sub").click(function() {
+        var mix=$("#mix").val();   
+        $("body").css("background-color", mix);
+      });
+     
+    });
+  </script>
+
+</body>
+</html>
