@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+   
+    <script>
+        $(document).ready(function() {
+      $("#sub").click(function() {
+        
+        var row=$("#row").val();
+        var col=$("#col").val();
+        var xyz="<table>";
+        for(i=1;i<=row;i++){
+            xyz+="<tr>";
+                for(j=1;j<=col;j++){
+                    xyz+="<td>123</td>";
+                }
+                xyz+="</tr>";
+        }
+        xyz+="</table >"
+        
+        $("#b").html(xyz);
+      });
+      
+    });
+    </script>
+</head>
+<body id="b">
+    <form action="" method="post">
+        <input type="number" name="row" id="row">
+       <input type="number" name="col" id="col">
+       <input type="button" id="sub" value="ok">
+    </form>
+    
+</body>
+</html>
